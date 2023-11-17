@@ -15,9 +15,6 @@ const pool = mysql.createPool({
   database: MYSQL_DB,
 })
 
-console.log('process: =>', process.env);
-console.log('MYSQL_HOST: =>', MYSQL_HOST);
-
 const CREATE_TIMES_TABLE_SQL = `CREATE TABLE IF NOT EXISTS times (
   id INT AUTO_INCREMENT PRIMARY KEY,
   time TEXT,

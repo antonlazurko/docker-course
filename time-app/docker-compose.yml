@@ -2,18 +2,18 @@ version: '2.1'
 
 services:
   frontend:
-    build: /home/user/MyProjects/docker-course/time-app/frontend
+    build: ./frontend
     volumes:
       - /app/node_modules
-      - /home/user/MyProjects/docker-course/time-app/frontend:/app
+      - ./frontend:/app
     restart: always
     ports:
       - '3000:3000'
   api:
-    build: /home/user/MyProjects/docker-course/time-app/api
+    build: ./api
     volumes:
       - /app/node_modules
-      - /home/user/MyProjects/docker-course/time-app/api:/app
+      - ./api:/app
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
